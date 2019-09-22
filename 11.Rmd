@@ -1,0 +1,41 @@
+---
+title: "Week 1"
+author: "Anastasiia Efimova"
+date: "9/22/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 2
+### Sampling
+
+First, let's sample 100 values from a log-normal distribution:
+
+```{r}
+set.seed(5)
+sample <- rlnorm(100, meanlog = 1, sdlog = 0.25)
+```
+### Histograms
+Here's a historgam of this distribution:
+
+```{r}
+
+hist(sample)
+```
+
+Here's a histogram of this distribution on a log scale:
+
+```{r}
+hist(log(sample))
+```
+
+### Mean and variance
+The mean of the sample is 2.817302 and its variance is 0.4644866.
+```{r}
+
+mean(sample)
+var(sample)
+```
